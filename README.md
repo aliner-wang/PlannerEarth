@@ -19,7 +19,7 @@ Planet Earth -> PlannerEarth
 
 2. Depending on what you work on, change head pointer to the respective branch. This way when you commit, you don't mess up main branch. 
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**To see what branch you're on:** git log
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**To see what branch you're on:** git log        
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**If Work on Backend:** git checkout back                     
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**If Work on Frontend:** git checkout front
 
