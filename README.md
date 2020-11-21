@@ -2,10 +2,14 @@
 Planet Earth -> PlannerEarth
 
 ## Folders
-#### Back: has all backend contents
-#### Front: holds an frontend code 
-#### Elements: holds all page contents and style (html and css)
-#### Designs: Design files and other relative content
+#### Back: 
+has all backend contents
+#### Front: 
+holds an frontend code 
+#### Elements: 
+holds all page contents and style (html and css)
+#### Designs: 
+Design files and other relative content
 
 ## Branches
 #### Front: Only for frontend contents (React, HTML, CSS) - Folders Front and Elements
