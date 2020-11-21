@@ -2,15 +2,15 @@
 Planet Earth -> PlannerEarth
 
 ## Folders
-**Back:** has all backend contents \n
-**Front:** holds an frontend code \n
-**Elements:** holds all page contents and style (html and css)\n
-**Designs:** Design files and other relative content\n
+**Back:** has all backend contents     
+**Front:** holds an frontend code     
+**Elements:** holds all page contents and style (html and css)     
+**Designs:** Design files and other relative content     
 
 
 ## Branches
-**Front:** Only for frontend contents (React, HTML, CSS) - Folders Front and Elements \n
-**Back:** Only for Backend things (Django, Mongo...) - Folder Back \n
+**Front:** Only for frontend contents (React, HTML, CSS) - Folders Front and Elements     
+**Back:** Only for Backend things (Django, Mongo...) - Folder Back       
 
 
 # Local Setup
