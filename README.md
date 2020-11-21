@@ -11,7 +11,7 @@ Planet Earth -> PlannerEarth
 #### Front: Only for frontend contents (React, HTML, CSS) - Folders Front and Elements
 #### Back: Only for Backend things (Django, Mongo...) - Folder Back
 
-## Setup
+# Local Setup
 
 1. In terminal, clone repository: git clone https://github.com/aliner-wang/PlannerEarth
 
