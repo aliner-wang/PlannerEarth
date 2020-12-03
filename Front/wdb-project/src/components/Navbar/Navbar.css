@@ -1,0 +1,8 @@
+.navbarItems {
+  /* Styling for the navigation bar of the website. */
+  background: #f3f3f3;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
