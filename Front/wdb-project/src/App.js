@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import './App.css';
-import Navbar from "./components/Navbar/Navbar.js";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 import Form from './components/ToDoList/form.js';
 import TodoList from './components/ToDoList/todolist.js'
 
@@ -35,7 +36,13 @@ function App() {
 
   return (
     <div className="App">
-    <Navbar />
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' />
+        </Switch>
+      </Router>
+  
     <header>
       <h1> My To-Do List</h1>
     </header>
@@ -49,3 +56,5 @@ function App() {
 }
 
 export default App;
+
+

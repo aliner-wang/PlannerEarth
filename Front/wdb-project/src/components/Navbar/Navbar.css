@@ -2,7 +2,78 @@
   /* Styling for the navigation bar of the website. */
   background: #f3f3f3;
   height: 80px;
+  align-items: center;
+  display: flex;
+}
+
+/* places the add button and user icon to the right side of the nav bar */
+.right-side {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 85vw;
+  justify-content: flex-end;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  background: none;
+}
+
+/* positions the toggle button on the left */
+.menu-icon {
+  display: flex;
+  justify-content: start;
+  margin: 30px;
+}
+
+/* this is the actual stuff inside the side bar when the toggle is clicked */
+.nav-menu {
+  background: #f3f3f3;
+  width: 250px;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+/* this animates the sidebar to slide out when the toggle is clicked. */
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.overdue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu-items {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* when the slide menu pops out, this centers the rotated toggle button */
+.navbar-toggle {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
   align-items: center;
 }
