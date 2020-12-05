@@ -1,11 +1,49 @@
+import React, { useState, useEffect} from "react";
 import './App.css';
-import React from 'react';
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar.js";
+import Form from './components/ToDoList/form.js';
+import TodoList from './components/ToDoList/todolist.js'
 
 function App() {
+  //Input text = what the person types into the bar for their task
+  const [inputText, setInputText] = useState("");
+  //List of all todos
+  const [todos, setTodos] = useState([]);
+  //Filter status - if they want to see all, completed, uncompleted, important tasks
+  const [status, setStatus] = useState("all");
+  //List of filtered todos - needed another list bc user might click all again and want original list saved as well
+  const [filteredTodos, setFilteredTodos] = useState([]);
+
+  useEffect(() => {
+    filterHandler();
+  }, [todos, status]);
+
+  //Filter out what the user wants to see based on category
+  const filterHandler = () => {
+    switch(status) {
+      case("completed"):
+        setFilteredTodos(todos.filter(todo => todo.completed === true))
+        break;
+      case("uncompleted"):
+        setFilteredTodos(todos.filter(todo => todo.completed === false))
+        break;
+      default:
+        setFilteredTodos(todos)
+        break;
+    }
+  };
+
   return (
     <div className="App">
-      <Navbar />
+    <Navbar />
+    <header>
+      <h1> My To-Do List</h1>
+    </header>
+    <Form
+      todos={todos} setTodos={setTodos} setInputText = {setInputText}
+      inputText={inputText} status={status} setStatus={setStatus}/>
+
+      <TodoList setTodos={setTodos} todos={todos} filteredTodos = {filteredTodos}/>
     </div>
   );
 }

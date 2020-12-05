@@ -1,6 +1,137 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  backgroud-color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: 2px solid black;
+  background: white;
+}
+form button {
+  color: black;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: black;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+.filter-todo {
+  padding: 1rem;
+}
+.todo li {
+  flex: 1;
+}
+.complete-btn, .edit-btn, .trash-btn, .important-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.important-btn {
+  background: pink;
+  color: white;
+  size: 14px;
+}
+.complete-btn {
+  background: grey;
+}
+.edit-btn {
+  background: blue;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check,
+.fa-edit, {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: black;
+  color: white;
+  cursor: pointer;
+  pointer-events: none;
 }
