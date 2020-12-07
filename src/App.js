@@ -19,6 +19,8 @@ function App() {
     filterHandler();
   }, [todos, status]);
 
+  
+
   //Filter out what the user wants to see based on category
   const filterHandler = () => {
     switch(status) {
