@@ -1,0 +1,16 @@
+.todo-input {
+    width:90%;
+    margin-left: 1vw;
+    border-color: transparent;
+    background-color: rgb(245, 243, 243)
+}
+
+.todo-button {
+    border-color: transparent;
+    background-color: rgb(245, 243, 243)
+}
+
+.filter-todo {
+    border-color: transparent;
+    background-color: rgb(245, 243, 243)
+}

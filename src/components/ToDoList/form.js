@@ -1,5 +1,6 @@
 import React from "react";
 import axios from 'axios';
+import './form.css'
 
 
 const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
