@@ -1,4 +1,6 @@
 import React from "react";
+import axios from 'axios';
+
 
 const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
   const inputTextHandler = (e) => {
@@ -10,11 +12,22 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
     setTodos([
       ...todos, {text: inputText, completed:false, id:Math.random()*1000}]);
     setInputText("");
+    // once the submit handle starts, meaning that once the user presses enter or presses the add button
+    // it will then send the inputText data via sendData.
+    sendData(inputText);
   };
 
   const statusHandler = (e) => {
     setStatus(e.target.value);
   }
+
+  /* sendData() sends the data (the text input) to the backend. */
+  function sendData(input) {
+    axios.post('http://localhost:3001/api', JSON.stringify(input))
+    .then(res => console.log(res.data))
+    .catch(e => console.log(e))
+  }
+
 
   return (
     <form>

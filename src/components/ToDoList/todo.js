@@ -22,7 +22,6 @@ const Todo = ({text, todo, todos, setTodos}) => {
       <button className="important-btn">
         <i className="fas fa-certificate"> </i>
       </button>
-      <li className = "dueDate"> 12/31 5:00PM </li>
       <li className = {`todo-item ${todo.completed ? "completed" : ""}`}> {text} </li>
       <button onClick={completeHandler} className="complete-btn">
         <i className="fas fa-check"> </i>
