@@ -8,6 +8,17 @@ app.use(bodyParser.json());
 
 var router = express.Router();
 
+// assign port for express to listen to 
+app.listen(3001, function() {
+    console.log("Server Up and running")
+});
+
+const cors = require('cors');
+app.use(express.json());
+app.use(cors());
+app.get('/api', (req, res) => {
+    console.log("YEET");
+})
 
 // creates mongo db connection
 const mongoose = require('mongoose')
@@ -108,8 +119,4 @@ router.route('/todos/:todo_id')
 
 
 
-//updates a task 
-
-
-// assign port for express to listen to 
-app.listen(3000, () => console.log("Server Up and running"));
+//updates a task */
