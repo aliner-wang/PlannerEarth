@@ -25,7 +25,10 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus, status, filt
 
   /* sendData() sends the data (the text input) to the backend. */
   function sendData(input) {
-    axios.post('http://localhost:3001/api', JSON.stringify(input))
+    const data = {
+      content: input
+    }
+    axios.post('http://localhost:4000/app/todos', data)
     .then(res => console.log(res.data))
     .catch(e => console.log(e))
   }
