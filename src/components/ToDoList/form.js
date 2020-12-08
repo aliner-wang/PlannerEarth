@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useEffect} from "react";
 import axios from 'axios';
 import './form.css'
+//import './App.js'
 
-
-const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
+const Form = ({setInputText, todos, setTodos, inputText, setStatus, status, filter}) => {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
@@ -20,15 +20,13 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
 
   const statusHandler = (e) => {
     setStatus(e.target.value);
+    //filter();
   }
 
   /* sendData() sends the data (the text input) to the backend. */
   function sendData(input) {
-    const registered = {
-      content: input
-    }
-    axios.post('http://localhost:4000/app/todos', registered)
-    .then(res => console.log(JSON.stringify(res.data)))
+    axios.post('http://localhost:3001/api', JSON.stringify(input))
+    .then(res => console.log(res.data))
     .catch(e => console.log(e))
   }
 
@@ -39,11 +37,11 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
       <button onClick={submitHandler} className="todo-button" type="submit">
         <i className="fas fa-plus-square"> </i>
       </button>
-      <div onClick={statusHandler} className="select">
-        <select name="todos" className="filter-todo">
-          <option value="all"> All </option>
-          <option value="completed"> Completed </option>
-          <option value="uncompleted"> Uncompleted </option>
+      <div className="select">
+        <select name="todos" className="filter-todo" onChange = {statusHandler}>
+          <option value="all" > All </option>
+          <option value="completed" > Completed </option>
+          <option value="uncompleted" > Uncompleted </option>
         </select>
       </div>
     </form>

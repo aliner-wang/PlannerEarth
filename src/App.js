@@ -47,12 +47,12 @@ function App() {
         </Switch>
       </Router>
   
-    {/* <header>
+    <header>
       <h1> My To-Do List</h1>
-    </header> */}
+    </header> 
     <Form
       todos={todos} setTodos={setTodos} setInputText = {setInputText}
-      inputText={inputText} status={status} setStatus={setStatus}/>
+      inputText={inputText} status={status} setStatus={setStatus} filter = {filterHandler}/>
 
       <TodoList setTodos={setTodos} todos={todos} filteredTodos = {filteredTodos}/>
     </div>

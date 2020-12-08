@@ -1,10 +1,24 @@
 import React from 'react';
 import './todo.css'
+/* This file handles all todo task objects. 
+text: 
+todo: 
+todos: 
+setTodos*/
+
+
+
+
+
 const Todo = ({text, todo, todos, setTodos}) => {
+
+  //deletes task on list
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id))
   };
 
+
+  // checks off thing on list
   const completeHandler = () => {
     setTodos(todos.map(item => {
       if (item.id === todo.id) {
@@ -17,6 +31,15 @@ const Todo = ({text, todo, todos, setTodos}) => {
     );
   };
 
+
+  const Edit = (text) => {
+    setTodos(todos.map(item => {
+      item.text = text
+    }))
+  }
+
+
+  //returns updaeted todo list with elements
   return (
     <div className = "todo">
       <button className="important-btn">
@@ -26,7 +49,7 @@ const Todo = ({text, todo, todos, setTodos}) => {
       <button onClick={completeHandler} className="complete-btn">
         <i className="fas fa-check"> </i>
       </button>
-      <button className="edit-btn">
+      <button onClick={Edit} className="edit-btn">
         <i className="fas fa-edit"> </i>
       </button>
       <button onClick={deleteHandler} className="trash-btn">
@@ -38,3 +61,6 @@ const Todo = ({text, todo, todos, setTodos}) => {
 };
 
 export default Todo;
+
+
+
