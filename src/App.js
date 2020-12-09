@@ -52,7 +52,7 @@ function App() {
     </header> 
     <Form
       todos={todos} setTodos={setTodos} setInputText = {setInputText}
-      inputText={inputText} status={status} setStatus={setStatus} filter = {filterHandler}/>
+      inputText={inputText} status={status} setStatus={setStatus}/>
 
       <TodoList setTodos={setTodos} todos={todos} filteredTodos = {filteredTodos}/>
     </div>

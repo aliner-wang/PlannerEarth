@@ -41,7 +41,8 @@ function Navbar() {
       </nav>
 
       {/* The ul tags below creates the add button usericon in the nav bar. */}
-      <ul className='right-side'>
+      
+      <ul className='right-side'> 
         {MenuItems.map((item, index) => {
           return(
             <li key={index} className='right-side-nav'>
@@ -52,6 +53,7 @@ function Navbar() {
           )
         })}
       </ul>
+      <img id = "will smith :)" src = "./willy.jpg" />
     </nav>
 
   )

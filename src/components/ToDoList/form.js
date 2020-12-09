@@ -3,7 +3,7 @@ import axios from 'axios';
 import './form.css'
 //import './App.js'
 
-const Form = ({setInputText, todos, setTodos, inputText, setStatus, status, filter}) => {
+const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
@@ -20,7 +20,6 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus, status, filt
 
   const statusHandler = (e) => {
     setStatus(e.target.value);
-    //filter();
   }
 
   /* sendData() sends the data (the text input) to the backend. */

@@ -1,7 +1,7 @@
 import React from 'react';
 import './todo.css'
 /* This file handles all todo task objects. 
-text: 
+text: text portion of todo object
 todo: 
 todos: 
 setTodos*/
@@ -33,13 +33,13 @@ const Todo = ({text, todo, todos, setTodos}) => {
 
 
   const Edit = (text) => {
-    setTodos(todos.map(item => {
+    setTodos(todos.map(item => 
       item.text = text
-    }))
+    ))
   }
 
 
-  //returns updaeted todo list with elements
+  //returns updated todo list with elements
   return (
     <div className = "todo">
       <button className="important-btn">
