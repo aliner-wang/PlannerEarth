@@ -53,7 +53,6 @@ function Navbar() {
           )
         })}
       </ul>
-      <img id = "will smith :)" src = "./willy.jpg" />
     </nav>
 
   )
